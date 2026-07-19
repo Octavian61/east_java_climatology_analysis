@@ -5,3 +5,6 @@ st.set_page_config(
   layout = "wide"
 )
 
+st.title("East Java Climatology Analysis Dashboard")
+st.markdown("Analisis klimatologi kawasan Jawa Timur dari data NASA dalam rentang 2015-2025")
+st.write("---")
