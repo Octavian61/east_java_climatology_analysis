@@ -38,6 +38,8 @@ with col2:
 with col3:
   st.metric(label = "Rata-rata Kelembaban", value = f"{df_filtered['RH2M'].mean():.2f} %")
 
+st.divider()
+
 st.subheader("Visualisasi Tren Jangka Panjang")
 tab1, tab2 = st.tabs(["Variabilitas Suhu"], ["Analisis Hujan Besar"])
 
