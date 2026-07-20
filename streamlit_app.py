@@ -18,6 +18,7 @@ def load_data():
   parse_date = True)
 
 df = load_data()
+df.index = pd.to_datetime(df.index)
 df.replace(-999, pd.NA, inplace=True)
 
 tahun_pilihan = st.sidebar.slider(
