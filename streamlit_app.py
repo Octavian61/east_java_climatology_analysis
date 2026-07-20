@@ -20,6 +20,6 @@ df = load_data()
 df.replace(-999, pd.NA, inplace=True)
 
 tahun_pilihan = st.sidebar.slider("Pilih Rentang Tahun",
-                                  int(df.index.year(min()),
-                                  int(df.index.year(max()),
+                                  int(df.index.year.min()),
+                                  int(df.index.year.max()),
                                   (2015, 2025))
