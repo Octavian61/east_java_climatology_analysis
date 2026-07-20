@@ -19,10 +19,15 @@ def load_data():
 df = load_data()
 df.replace(-999, pd.NA, inplace=True)
 
-tahun_pilihan = st.sidebar.slider("Pilih Rentang Tahun", 
-                                  int(df.index.year.min()), 
-                                  int(df.index.year.max()), 
-                                  (2020, 2025))
+tahun_pilihan = st.sidebar.slider(
+  "Pilih Rentang Tahun", 
+  int(df.index.year.min()), 
+  int(df.index.year.max()), 
+  (2020, 2025)
+)
 
-# Memfilter dataframe berdasarkan input user
 df_filtered = df[(df.index.year >= tahun_pilihan[0]) & (df.index.year <= tahun_pilihan[1])]
+
+col1, col2, col3 = st.columns(3)
+with col1:
+  st.metric(label = "Rata-rata Suhu", value = f"{df_filtered['T2M'].mean():.2f} °C"
