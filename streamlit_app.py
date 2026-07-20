@@ -33,3 +33,7 @@ df_filtered = df[(df.index.year >= tahun_pilihan[0]) & (df.index.year <= tahun_p
 col1, col2, col3 = st.columns(3)
 with col1:
   st.metric(label = "Rata-rata Suhu", value = f"{df_filtered['T2M'].mean():.2f} °C")
+with col2:
+  st.metric(label = "Total Curah Hujan", value = f"{df_filtered['PRECTOTCORR'].sum():.1f} mm")
+with col3:
+  st.metric(label = "Rata-rata Kelembaban", value = f"{df_filtered['RH2M'].mean():.2f} %)
