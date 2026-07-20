@@ -13,9 +13,9 @@ st.write("---")
 st.sidebar.header("Pemilihan Parameter")
 @st.cache_data
 def load_data():
-  df = pd.read_csv("climatology_daily_2015_2025.csv"),
+  df = pd.read_csv("climatology_daily_2015_2025.csv",
   index_col = "Date",
-  pase_date = True
+  pase_date = True)
 
 df = load_data()
 df.replace(-999, pd.NA, inplace=True)
