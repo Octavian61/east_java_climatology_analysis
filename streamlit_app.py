@@ -37,3 +37,9 @@ with col2:
   st.metric(label = "Total Curah Hujan", value = f"{df_filtered['PRECTOTCORR'].sum():.1f} mm")
 with col3:
   st.metric(label = "Rata-rata Kelembaban", value = f"{df_filtered['RH2M'].mean():.2f} %")
+
+st.subheader("Visualisasi Tren Jangka Panjang")
+tab1, tab2 = st.tabs(["Variabilitas Suhu"], ["Analisis Hujan Besar"])
+
+with tab1:
+  df_monthly = df_filtered['T2M'].resample('RE').mean().to_frame(name = "T2M_mean")
