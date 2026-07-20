@@ -36,4 +36,4 @@ with col1:
 with col2:
   st.metric(label = "Total Curah Hujan", value = f"{df_filtered['PRECTOTCORR'].sum():.1f} mm")
 with col3:
-  st.metric(label = "Rata-rata Kelembaban", value = f"{df_filtered['RH2M'].mean():.2f} %)
+  st.metric(label = "Rata-rata Kelembaban", value = f"{df_filtered['RH2M'].mean():.2f} %")
