@@ -13,7 +13,7 @@ st.write("---")
 st.sidebar.header("Pemilihan Parameter")
 @st.cache_data
 def load_data():
-  df = pd.read_csv("climatology_daily_2015_2025.csv",
+  return pd.read_csv("climatology_daily_2015_2025.csv",
   index_col = "Date",
   pase_date = True)
 
